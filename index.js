@@ -34,6 +34,7 @@ new zodiac(11, 'Козерог', 11, 22, 0, 20)
 const birthDate = document.getElementById('birthDate');
 const defineButton = document.getElementById('defineButton');
 const resultLabel = document.getElementById('resultLabel');
+birthDate.value = '';
 defineButton.addEventListener('click', function() {
 	const userDate = new Date(Date.parse(birthDate.value));
 	const result = zodiacArray.filter((zodiac) => {
@@ -48,6 +49,7 @@ else
 {
 birthDate.style.backgroundColor = 'pink';
 resultImage.src = 'images/zodiac.jpg';
+resultLabel.innerHTML = 'Знак зодиака - ';
 }
 });
 birthDate.addEventListener('focus', function() {
